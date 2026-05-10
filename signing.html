@@ -20,12 +20,21 @@
       crossorigin="anonymous"
     />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png" href="assets/images/routinefit_favicon.ico" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
- </head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/images/routinefit_favicon.ico"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/logo.png"
+    />
+  </head>
   <body class="signup-page">
-    <header> 
+    <header>
       <nav class="navbar sticky-top bg-light shadow-sm">
         <div class="container-fluid px-4">
           <a class="navbar-brand fw-bold" href="index.html">
@@ -36,108 +45,98 @@
             />
           </a>
           <div class="ms-auto">
-              <a href="signing.html" class="btn btn-outline-primary me-2">
+            <a href="signing.html" class="btn btn-outline-primary me-2">
               Get Started
             </a>
-         </div>
+          </div>
         </div>
       </nav>
     </header>
     <main>
-  
-<!-- ✅ Add class ONLY here so background applies to this page -->
+      <!-- ✅ Add class ONLY here so background applies to this page -->
 
+      <div class="overlay">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-5">
+              <div class="signup-card">
+                <h3 class="text-center mb-4">Create Account</h3>
 
-  <div class="overlay">
-    <div class="container">
-      <div class="row justify-content-center">
-        
-        <div class="col-12 col-sm-10 col-md-8 col-lg-5">
-          <div class="signup-card">
+                <form aria-labelledby="form-title">
+                  <!-- Full Name -->
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form-control"
+                      required
+                      tabindex="0"
+                    />
+                  </div>
 
-            <h3 class="text-center mb-4">Create Account</h3>
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      required
+                      tabindex="0"
+                      aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email.
+                    </div>
+                  </div>
 
-<form aria-labelledby="form-title">
+                  <!-- Password -->
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      required
+                      minlength="6"
+                      tabindex="0"
+                    />
+                  </div>
 
-  <!-- Full Name -->
-  <div class="mb-3">
-    <label for="name" class="form-label">Full Name</label>
-    <input 
-      type="text" 
-      id="name"
-      class="form-control"
-      required
-      tabindex="0"
-    >
-  </div>
+                  <!-- Confirm Password -->
+                  <div class="mb-3">
+                    <label for="confirm-password" class="form-label"
+                      >Confirm Password</label
+                    >
+                    <input
+                      type="password"
+                      id="confirm-password"
+                      class="form-control"
+                      required
+                      tabindex="0"
+                    />
+                  </div>
 
-  <!-- Email -->
-  <div class="mb-3">
-    <label for="email" class="form-label">Email Address</label>
-    <input 
-      type="email" 
-      id="email"
-      class="form-control"
-      required
-      tabindex="0"
-      aria-describedby="emailHelp"
-    >
-    <div id="emailHelp" class="form-text">
-      We'll never share your email.
-    </div>
-  </div>
-
-  <!-- Password -->
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input 
-      type="password" 
-      id="password"
-      class="form-control"
-      required
-      minlength="6"
-      tabindex="0"
-    >
-  </div>
-
-  <!-- Confirm Password -->
-  <div class="mb-3">
-    <label for="confirm-password" class="form-label">Confirm Password</label>
-    <input 
-      type="password" 
-      id="confirm-password"
-      class="form-control"
-      required
-      tabindex="0"
-    >
-  </div>
-
-  <!-- Submit -->
-  <a 
-    href="dashboard.html" 
-    class="btn btn-success w-100 mt-3 mb-3 signing-btn"
-    tabindex="0"
-  >
-    Sign Up
-</a>
-
-</form>
- </div>
+                  <!-- Submit -->
+                  <a
+                    href="dashboard.html"
+                    class="btn btn-success w-100 mt-3 mb-3 signing-btn"
+                    tabindex="0"
+                  >
+                    Sign Up
+                  </a>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
-    </div>
-  </div>
-
-
-
     </main>
 
-
     <footer class="text-center py-3">
-   <p>© 2026 RoutineFit | Smart Routine & Goal Management</p>
+      <p>© 2026 RoutineFit | Smart Routine & Goal Management</p>
     </footer>
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
