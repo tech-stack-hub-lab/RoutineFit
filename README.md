@@ -200,9 +200,7 @@ Summary cards & shortcuts
 👤 profile.html
 
 User personal details
-Profile image
-Habit preferences
-Editable information
+
 
 
 📈 progress.html
@@ -215,10 +213,7 @@ Performance insights
 
 ⚙️ setting.html
 
-App preferences
-Notifications
-Privacy options
-Theme & accessibility settings
+Theme & Language settings
 
 
 🔐 signing.html
@@ -227,3 +222,48 @@ User registration
 Login form
 Validation-ready structure
 Entry point to dashboard
+
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+![alt text](image.png)
+
+### 🔐 Sign In / Sign Up
+![Signing Page](screenshots/signing.png)
+![alt text](image-1.png)
+
+### 📊 Dashboard
+![Dashboard](screenshots/dashboard.png)
+![alt text](image-2.png)
+
+### 👤 Profile Page
+![Profile Page](screenshots/profile.png)
+![alt text](image-3.png)
+
+### 📈 Progress Report
+![Progress Report](screenshots/progress.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
+
+### ⚙️ Settings Page
+![Settings Page](screenshots/settings.png)
+![alt text](image-4.png)
+
+## 🚀 Performance & Accessibility Audit
+
+Routine Fit was evaluated using **Google Lighthouse** to ensure optimal performance, accessibility, and SEO.
+
+screenshots/lighthouse-summary.png
+
+### Lighthouse Scores
+- ⚡ Performance: 99+
+- ♿ Accessibility: 98+
+- ✅ Best Practices: 100
+- 🔍 SEO: 100
+
+📄 **Full Lighthouse Report:**  
+[Download Lighthouse PDF](reports/lighthouse-performance.pdf)
