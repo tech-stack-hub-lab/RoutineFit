@@ -168,6 +168,7 @@ body {
 }
 
 @media (max-width: 576px) {
+  
     .navbar-brand img {
         width: 75% !important;
         height: 75% !important;
@@ -185,9 +186,16 @@ body {
         max-width: 22rem;
        
     }
+    .routines-overview{
+        margin-top: 10px;
+    }
     .routines-overview p{
-text-align: justify;
-text-justify: inter-word;
+        font-size: 14px;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+    .key-info{
+        margin-top: 10px;
     }
     .benefits-row{
         display: flex;
@@ -196,10 +204,6 @@ text-justify: inter-word;
     align-items: center;
     }
 }
-
-
-
-
 .navbar-brand,
 .btn-outline-primary {
     color: #455574;
