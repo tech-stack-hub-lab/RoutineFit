@@ -16,6 +16,12 @@
     --bs-light: #f8f9fa;
     
 }
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Body styling for accessible page contrast #e9ecf1 */
 body {
     margin: 0;
@@ -93,16 +99,12 @@ body {
 }
 
 /* Nav Pills Styling */
-.nav-tabs {
-    gap: 1rem;
-}
 
 .nav-tabs .nav-link {
     color: var(--primary-blue);
+    font-size: 18px;
     font-weight: 600;
 }
-
-
 
 /* Sticky navbar behavior */
 .navbar.sticky-top {
@@ -278,9 +280,26 @@ footer .navbar-brand {
     border-radius: 15px;
     max-width: 18rem;
 }
-.border-success:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+#benefits .card{
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+}
+
+/* Optional section animations */
+#benefits .card-header,
+#benefits .card-footer {
+  transition: background 0.3s ease;
+}
+
+#benefits .card-body:hover{
+    /* transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); */
+
+transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+
 }
 .border-success .text-success{
     color: #455574 !important;
@@ -289,5 +308,69 @@ footer .navbar-brand {
 #pills-tabContent{
     margin-top: 2rem;
 }
+
+ /* Alternate background colors */
+  #benefits .card:nth-child(odd) {
+    background-color: var(--blue-tint); /* Blue */
+  }
+
+  #benefits .card:nth-child(even) {
+    background-color: var(--bs-light) /* Orange */
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    #benefits .card {
+      flex: 1 1 calc(50% - 15px);
+    }
+  }
+
+  @media (max-width: 480px) {
+    #benefits .card {
+      flex: 1 1 100%;
+    }
+  }
+
+
+
+  /* signup */
+
+/* ✅ Background image ONLY for this page */
+    body.signup-page {
+      background: url('../images/bg.JPG') no-repeat center center/cover;
+      min-height: 100vh;
+    }
+
+    /* Dark overlay for readability */
+    .overlay {
+      background: rgba(0, 0, 0, 0.3);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Signup card styling */
+    .signup-card {
+      border-radius: 12px;
+      padding: 30px;
+      background: #ffffff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+    .signing-btn{
+        background-color: #455574;
+    border-color: #455574;
+    color: var(--white);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .signup-card {
+        padding: 20px;
+      }
+    }
+
 
 
