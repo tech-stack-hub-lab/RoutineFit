@@ -30,6 +30,7 @@ body {
     color: var(--dark-gray);
     font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 /* Navbar Styling */
@@ -38,9 +39,12 @@ body {
     height: 100%;
 }
 .navbar {
+    color: #F7F2F2;
+    background-color: var(--light-bg) !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
 }
+
 
 .navbar-brand {
     display: flex;
@@ -63,7 +67,18 @@ body {
     background-clip: text;
     white-space: nowrap;
 }
-
+.nav-link{
+    color: #455574 !important;
+}
+.nav-link:focus{
+    outline: 3px solid #455574 !important;
+    outline-offset: 2px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: #455574 !important;
+       border-color: #455574 !important;
+    transition: all 0.3s ease;
+}
 /* Button Styling */
 .btn-outline-primary {
     border-width: 2px;
@@ -98,7 +113,7 @@ body {
     box-shadow: 0 4px 8px rgba(24, 90, 219, 0.4);
 }
 
-/* Nav Pills Styling */
+/* Nav tabs Styling */
 
 .nav-tabs .nav-link {
     color: var(--primary-blue);
@@ -201,6 +216,7 @@ footer{
     border-top: 1px solid #455574;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
+    
 }
 footer .navbar-brand {
     color: var(--dark-gray);
@@ -315,8 +331,9 @@ transform: translateY(-10px) scale(1.02);
   }
 
   #benefits .card:nth-child(even) {
-    background-color: var(--bs-light) /* Orange */
+    background-color: var(--bs-light); /* Orange */
   }
+ 
 
   /* Responsive */
   @media (max-width: 768px) {
@@ -343,7 +360,7 @@ transform: translateY(-10px) scale(1.02);
 
     /* Dark overlay for readability */
     .overlay {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.8);
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -373,4 +390,87 @@ transform: translateY(-10px) scale(1.02);
     }
 
 
+
+
+/* Cards */
+.custom-card {
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Step Form */
+.step-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Accessibility focus */
+:focus {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+:focus {
+  outline: 3px solid #0d6efd;
+}
+button.btn.btn-custom {
+    color: #fff;
+    background: #444444;
+}
+
+.habit-card {
+  border-radius: 16px;
+  color: #fff;
+  padding: 22px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--primary-blue);
+}
+ 
+
+.habit-card:hover {
+    
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+.habit-card .btn {
+  background: #ffffff;
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+}
+.habit-card .btn:hover {
+  background: #ffffff !important;
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+}
+* 🎨 Random-looking colors using nth-child */
+.habit-card:nth-child(6n+1) { background-color: #ff6f61 !important; }
+.habit-card:nth-child(6n+2) { background-color: #4caf50; }
+.habit-card:nth-child(6n+3) { background-color: #03a9f4; }
+.habit-card:nth-child(6n+4) { background-color: #673ab7; }
+.habit-card:nth-child(6n+5) { background-color: #ff9800; }
+.habit-card:nth-child(6n+6) { background-color: #009688; }
+ 
+
+
+:focus {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 

@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -23,40 +23,279 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="icon" type="image/png" href="assets/images/routinefit_favicon.ico" sizes="192x192">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
- </head>
-  <body>
-    <header> 
-      <nav class="navbar sticky-top bg-light shadow-sm">
-        <div class="container-fluid px-4">
-          <a class="navbar-brand fw-bold" href="index.html">
-            <img
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+  <div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="dashboard.html" tabindex="0"> <img
               src="assets/images/logo.png"
               alt="RoutineFit Logo"
               class="logo d-inline-block align-text-top me-2"
-            />
+            /></a>
+
+    <!-- Toggle Button (Mobile) -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      tabindex="0"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="dashboard.html" tabindex="0">Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="progress.html" tabindex="0">Progress</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="setting.html" tabindex="0">Settings</a>
+        </li>
+
+      </ul>
+
+      <!-- Profile Dropdown -->
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+
+          <a 
+            class="nav-link dropdown-toggle d-flex align-items-center" 
+            href="#" 
+            id="profileDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-haspopup="true"
+            tabindex="0"
+          >
+            <i class="bi bi-person-circle profile-icon" aria-hidden="true"></i>
+            <span class="ms-2">Profile</span>
           </a>
-          <div class="ms-auto">
-           <a href="register.html" class="btn btn-outline-primary me-2">
-              Get Started
-            </a>
-         </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-    <h1>Dashboard</h1>
-    </main>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            
+            <li>
+              <a class="dropdown-item" href="profile.html" tabindex="0">
+                View Profile
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="setting.html" tabindex="0">
+                Settings
+              </a>
+            </li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            <li>
+              <a class="dropdown-item text-danger" href="index.html" tabindex="0">
+                Logout
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+<main>
 
 
-    <footer class="text-center py-3">
+<div class="container py-4">
+
+<h2 class="text-center mb-4">Routine Fit Dashboard</h2>
+
+<!-- ✅ CARDS -->
+<div class="row g-4">
+
+  <div class="col-12 col-md-4">
+   <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Fitness Goal</h5>
+      <p>Track your health activities</p>
+        <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+   <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Study Plan</h5>
+      <p>Manage study routine</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Work Goals</h5>
+      <p>Track productivity of your daily routine</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+<div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Work Goals</h5>
+      <p>Track productivity of your daily routine</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Work Goals</h5>
+      <p>Track productivity of your daily routine</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+       <h5>Time Management</h5>
+    <p>Poor daily planning</p>
+     <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+   <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Reduce Screen Time</h5>
+    <p>Phone addiction</p>
+     <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Daily Journaling</h5>
+    <p>Forget to write</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Learn New Skills</h5>
+    <p>Lose interest fast</p>
+     <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+   <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Avoid Procrastination</h5>
+    <p>Delay important tasks</p>
+     <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+   <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Morning Walk</h5>
+    <p>Skipped after days</p>
+     <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+ <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Stay Positive</h5>
+    <p>Stress & negativity</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+     <h5>Complete Tasks</h5>
+    <p>Miss deadlines</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+    </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Work‑Life Balance</h5>
+    <p>Overwork or laziness</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="habit-card custom-card p-3"
+      tabindex="0">
+      <h5>Self‑Discipline</h5>
+    <p>Hard to stay consistent</p>
+      <a href="progress.html" class="btn btn-custom" tabindex="0">
+          CLICK ME
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+ 
+</main>
+ <footer class="text-center py-3">
    <p>© 2026 RoutineFit | Smart Routine & Goal Management</p>
-    </footer>
+  </footer>
 
+<!-- Bootstrap JS -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+</body>
 </html>

@@ -1,0 +1,381 @@
+ <!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="The purpose of Routine Fit is to provide a unified digital platform that helps users manage their daily routines and health-related habits in enjoyable and consistent way. The website addresses common issues such as lack of discipline, irregular schedules, unhealthy lifestyle habits, and mental stress. Routine Fit motivates users to maintain consistency and improve overall well-being"
+    />
+    <meta
+      name="keywords"
+      content="Routine management, Fitness, career Goal, discipline, habits, lifestyle, motivates, healthy, schedules, well-being, daily-routines"
+    />
+    <meta name="author" content="Tech Stack Hub" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Routine Fit</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/routinefit_favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="dashboard.html" tabindex="0"> <img
+              src="assets/images/logo.png"
+              alt="RoutineFit Logo"
+              class="logo d-inline-block align-text-top me-2"
+            /></a>
+
+    <!-- Toggle Button (Mobile) -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      tabindex="0"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      
+      <ul class="navbar-nav me-auto">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="dashboard.html" tabindex="0">Dashboard</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="progress.html" tabindex="0">Progress</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="setting.html" tabindex="0">Settings</a>
+        </li>
+
+      </ul>
+
+      <!-- Profile Dropdown -->
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+
+          <a 
+            class="nav-link dropdown-toggle d-flex align-items-center" 
+            href="#" 
+            id="profileDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-haspopup="true"
+            tabindex="0"
+          >
+            <i class="bi bi-person-circle profile-icon" aria-hidden="true"></i>
+            <span class="ms-2">Profile</span>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            
+            <li>
+              <a class="dropdown-item" href="profile.html" tabindex="0">
+                View Profile
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="setting.html" tabindex="0">
+                Settings
+              </a>
+            </li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            <li>
+              <a class="dropdown-item text-danger" href="index.html" tabindex="0">
+                Logout
+              </a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+<main class="flex-fill py-4">
+
+<h2 class="text-center mb-4">See your Progress Report</h2>
+
+<!-- ✅ STEPPER HEADER -->
+<ul class="nav nav-tabs justify-content-center mb-4" role="tablist">
+
+  <li class="nav-item">
+    <button class="nav-link active"
+      data-bs-toggle="tab"
+      data-bs-target="#step1"
+      type="button">
+      Step 1
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button class="nav-link"
+      data-bs-toggle="tab"
+      data-bs-target="#step2"
+      type="button">
+      Step 2
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button class="nav-link"
+      data-bs-toggle="tab"
+      data-bs-target="#step3"
+      type="button">
+      Step 3
+    </button>
+  </li>
+
+  <li class="nav-item">
+    <button class="nav-link"
+      data-bs-toggle="tab"
+      data-bs-target="#step4"
+      type="button">
+      Step 4
+    </button>
+  </li>
+
+</ul>
+
+<!-- ✅ STEPPER CONTENT -->
+<div class="tab-content">
+
+  <!-- STEP 1 -->
+<div class="tab-pane fade show active" id="step1">
+  <div class="step-card">
+
+    <h4 class="mb-3">Set Your Goal</h4>
+
+    <div class="mb-3">
+      <label class="form-label">Habit Name</label>
+      <input type="text" class="form-control" placeholder="e.g. Wake up early">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Why is this important?</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Start Date</label>
+      <input type="date" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">End Date</label>
+      <input type="date" class="form-control">
+    </div>
+
+    <button class="btn btn-primary"
+      data-bs-toggle="tab"
+      data-bs-target="#step2"
+      type="button">
+      Next →
+    </button>
+
+  </div>
+</div>
+
+  <!-- STEP 2 -->
+ <div class="tab-pane fade" id="step2">
+  <div class="step-card">
+
+    <h4 class="mb-3">Create Your Plan</h4>
+
+    <div class="mb-3">
+      <label class="form-label">Daily Action</label>
+      <input type="text" class="form-control" placeholder="What will you do daily?">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Time Commitment (minutes)</label>
+      <input type="number" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Best Time of Day</label>
+      <select class="form-select">
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Possible Challenges</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-secondary"
+        data-bs-toggle="tab"
+        data-bs-target="#step1"
+        type="button">
+        ← Previous
+      </button>
+
+      <button class="btn btn-primary"
+        data-bs-toggle="tab"
+        data-bs-target="#step3"
+        type="button">
+        Next →
+      </button>
+    </div>
+
+  </div>
+</div>
+
+  <!-- STEP 3 -->
+  <div class="tab-pane fade" id="step3">
+  <div class="step-card">
+
+    <h4 class="mb-3">Track Your Progress</h4>
+
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="day1">
+      <label class="form-check-label" for="day1">Day 1 completed</label>
+    </div>
+
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="day2">
+      <label class="form-check-label" for="day2">Day 2 completed</label>
+    </div>
+
+    <div class="form-check mb-2">
+      <input class="form-check-input" type="checkbox" id="day3">
+      <label class="form-check-label" for="day3">Day 3 completed</label>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Notes / Feelings</label>
+      <textarea class="form-control" rows="3"></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-secondary"
+        data-bs-toggle="tab"
+        data-bs-target="#step2"
+        type="button">
+        ← Previous
+      </button>
+
+      <button class="btn btn-primary"
+        data-bs-toggle="tab"
+        data-bs-target="#step4"
+        type="button">
+        Next →
+      </button>
+    </div>
+
+  </div>
+</div>
+  <!-- STEP 4 -->
+ <div class="tab-pane fade" id="step4">
+  <div class="step-card">
+
+    <h4 class="mb-3">Progress Report 🎉</h4>
+
+    <p>Overall Completion</p>
+    <div class="progress mb-3" role="progressbar"
+      aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar bg-success" style="width:75%">75%</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">What went well?</label>
+      <textarea class="form-control" rows="2"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">What needs improvement?</label>
+      <textarea class="form-control" rows="2"></textarea>
+     
+    </div>
+<div class="mb-3">
+     <button class="btn btn-primary" type="submit">Submit</button>
+</div>
+    <div class="mb-3">
+         <!-- Progress -->
+
+    <div class="card p-3">
+      <h4>Habit Progress</h4>
+
+      <label>Exercise</label>
+      <div class="progress mb-3" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar bg-success" style="width:70%">70%</div>
+      </div>
+
+      <label>Meditation</label>
+      <div class="progress" role="progressbar" aria-valuenow="50">
+        <div class="progress-bar bg-info" style="width:50%">50%</div>
+      </div>
+    </div>
+
+
+  <!-- Achievements -->
+ 
+    <div class="card p-3 mt-3 mb-3">
+      <h4>Achievements 🏆</h4>
+      <ul>
+        <li>✅ 7-day streak completed</li>
+        <li>✅ First goal achieved</li>
+        <li>✅ 10 tasks completed</li>
+      </ul>
+    </div>
+  
+
+    </div>
+
+    <button class="btn btn-secondary"
+      data-bs-toggle="tab"
+      data-bs-target="#step3"
+      type="button">
+      ← Previous
+    </button>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</main>
+ <footer class="text-center py-3">
+   <p>© 2026 RoutineFit | Smart Routine & Goal Management</p>
+  </footer>
+
+<!-- Bootstrap JS -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
