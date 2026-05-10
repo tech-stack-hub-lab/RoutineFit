@@ -20,9 +20,12 @@
       crossorigin="anonymous"
     />
     <link href="assets/css/style.css" rel="stylesheet" />
-  </head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/routinefit_favicon.ico" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+ </head>
   <body>
-    <header>
+    <header> 
       <nav class="navbar sticky-top bg-light shadow-sm">
         <div class="container-fluid px-4">
           <a class="navbar-brand fw-bold" href="index.html">
@@ -214,26 +217,24 @@ RoutineFit helps you stay consistent and reach your goals.
         <div class="row routines-overview">
             <h2 class="mb-5 text-center">Feature overview</h2>
             <p class="text-center text-muted mb-5">Routine Fit offers a range of features designed to simplify routine management and improve user experience:</p>
-         
- <!-- Benefit 1 -->
         <div class="col-md-12 col-lg-12">
-           <ul class="nav nav-pills justify-content-center" id="pills-tab" role="tablist">
+   <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-plan-tab" data-bs-toggle="pill" data-bs-target="#pills-plan" type="button" role="tab" aria-controls="pills-plan" aria-selected="true">Plan</button>
+    <button class="nav-link active" id="plan-tab" data-bs-toggle="tab" data-bs-target="#plan" type="button" role="tab" aria-controls="plan" aria-selected="true">Plan</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-set-goals-tab" data-bs-toggle="pill" data-bs-target="#pills-set-goals" type="button" role="tab" aria-controls="pills-set-goals" aria-selected="false">Set Your Goals</button>
+    <button class="nav-link" id="goals-tab" data-bs-toggle="tab" data-bs-target="#goals" type="button" role="tab" aria-controls="goals" aria-selected="false">Set Your Goals</button>
   </li>
   <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-track-tab" data-bs-toggle="pill" data-bs-target="#pills-track" type="button" role="tab" aria-controls="pills-track" aria-selected="false">Track</button>
+    <button class="nav-link" id="track-tab" data-bs-toggle="tab" data-bs-target="#track" type="button" role="tab" aria-controls="track" aria-selected="false">Track</button>
   </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-achieve-tab" data-bs-toggle="pill" data-bs-target="#pills-achieve" type="button" role="tab" aria-controls="pills-achieve" aria-selected="false">Achieve</button>
+   <li class="nav-item" role="presentation">
+    <button class="nav-link" id="achieve-tab" data-bs-toggle="tab" data-bs-target="#achieve" type="button" role="tab" aria-controls="achieve" aria-selected="false">Achieve</button>
   </li>
 </ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-plan" role="tabpanel" aria-labelledby="pills-plan-tab" tabindex="0">
-    <div class="row align-items-center">
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="plan" role="tabpanel" aria-labelledby="plan-tab" tabindex="0">
+     <div class="row align-items-center">
       <div class="col-md-6">
         <h3>Plan Your Routines</h3>
         <p>The planning feature in Routine Fit helps users organize their daily routines and health activities in a structured way. Users can create task lists such as exercise, study, or meditation, making it easier to manage time and stay disciplined.</p>
@@ -243,8 +244,8 @@ RoutineFit helps you stay consistent and reach your goals.
       </div>
     </div>
   </div>
-  <div class="tab-pane fade" id="pills-set-goals" role="tabpanel" aria-labelledby="pills-set-goals-tab" tabindex="0">
-    <div class="row align-items-center">
+  <div class="tab-pane fade" id="goals" role="tabpanel" aria-labelledby="goals-tab" tabindex="0">
+        <div class="row align-items-center">
       <div class="col-md-6">
         <h3>Set Your Goals</h3>
         <p>This feature allows users to define clear and achievable goals for personal growth. Setting goals gives direction and purpose, helping users stay focused and motivated throughout their journey.</p>
@@ -252,10 +253,10 @@ RoutineFit helps you stay consistent and reach your goals.
       <div class="col-md-6">
         <img src="assets/images/goals.png" alt="Setting Goals" class="img-fluid rounded">
       </div>
-    </div>
+    </div> 
   </div>
-  <div class="tab-pane fade" id="pills-track" role="tabpanel" aria-labelledby="pills-track-tab" tabindex="0">
-    <div class="row align-items-center">
+  <div class="tab-pane fade" id="track" role="tabpanel" aria-labelledby="track-tab" tabindex="0">
+     <div class="row align-items-center">
       <div class="col-md-6">
         <h3>Track Your Progress</h3>
         <p>Routine Fit enables users to track their daily activities and habits. It monitors consistency using streaks and progress indicators, helping users stay motivated and aware of their performance.</p>
@@ -265,8 +266,8 @@ RoutineFit helps you stay consistent and reach your goals.
       </div>
     </div>
   </div>
-  <div class="tab-pane fade" id="pills-achieve" role="tabpanel" aria-labelledby="pills-achieve-tab" tabindex="0">
-    <div class="row align-items-center">
+    <div class="tab-pane fade" id="achieve" role="tabpanel" aria-labelledby="achieve-tab" tabindex="">
+        <div class="row align-items-center">
       <div class="col-md-6">
         <h3>Achieve Your Goals</h3>
         <p>The achievement feature rewards users when they complete goals and maintain consistency. It provides a sense of accomplishment and encourages users to continue improving their lifestyle.</p>
@@ -275,7 +276,7 @@ RoutineFit helps you stay consistent and reach your goals.
         <img src="assets/images/achieve.png" alt="Achieving Goals" class="img-fluid rounded">
       </div>
     </div>
-  </div>
+    </div>
 </div>
         </div>
   </div>
