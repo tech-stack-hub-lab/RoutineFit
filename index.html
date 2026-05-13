@@ -20,9 +20,9 @@
       crossorigin="anonymous"
     />
     <link href="assets/css/style.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/routinefit_favicon.ico">
     <link rel="icon" type="image/png" href="assets/images/routinefit_favicon.ico" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/routinefit_favicon.ico">
  </head>
   <body>
     <header> 
@@ -30,7 +30,8 @@
         <div class="container-fluid px-4">
           <a class="navbar-brand fw-bold" href="index.html">
             <img
-              src="assets/images/logo.png"
+              loading="lazy"
+              src="assets/images/RoutineFit.png"
               alt="RoutineFit Logo"
               class="logo d-inline-block align-text-top me-2"
             />
@@ -84,15 +85,14 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="assets/images/4.webp" aria-hidden="true"
+                <img loading="lazy" src="assets/images/11.jpg" aria-hidden="true"
                 class="bd-placeholder-img"
-                height="100%"
-                preserveAspectRatio="xMidYMid slice"
-                width="100%">
+                height="100"
+                width="100">
               
                 <rect
-                  width="100%"
-                  height="100%"
+                  width="100"
+                  height="100"
                   fill="var(--bs-secondary-color)"
                 ></rect>
               </svg>
@@ -110,14 +110,13 @@ RoutineFit helps you plan, track, and stay organized in one place.
               </div>
             </div>
             <div class="carousel-item ">
-           <img src="assets/images/5.webp" aria-hidden="true"
+           <img loading="lazy" src="assets/images/12.jpg" aria-hidden="true"
                 class="bd-placeholder-img"
-                height="100%"
-                preserveAspectRatio="xMidYMid slice"
-                width="100%">
+                height="100"
+                width="100">
                 <rect
-                  width="100%"
-                  height="100%"
+                  width="100"
+                  height="100"
                   fill="var(--bs-secondary-color)"
                 ></rect>
               </svg>
@@ -135,14 +134,13 @@ Track completed work and get reminders for pending tasks.
               </div>
             </div>
             <div class="carousel-item">
-              <img src="assets/images/3.jpg" aria-hidden="true"
+              <img loading="lazy" src="assets/images/3.png" aria-hidden="true"
                 class="bd-placeholder-img"
-                height="100%"
-                preserveAspectRatio="xMidYMid slice"
-                width="100%">
+                height="100"
+                width="100">
                 <rect
-                  width="100%"
-                  height="100%"
+                  width="100"
+                  height="100"
                   fill="var(--bs-secondary-color)"
                 ></rect>
               </svg>
@@ -163,14 +161,13 @@ Know where you stand now and how much improvement is needed.
               </div>
             </div>
               <div class="carousel-item">
-           <img src="assets/images/result.webp" aria-hidden="true"
+           <img loading="lazy" src="assets/images/14.jpg" aria-hidden="true"
                 class="bd-placeholder-img"
-                height="100%"
-                preserveAspectRatio="xMidYMid slice"
-                width="100%">
+                height="100"
+                width="100">
                 <rect
-                  width="100%"
-                  height="100%"
+                  width="100"
+                  height="100"
                   fill="var(--bs-secondary-color)"
                 ></rect>
               </svg>
@@ -236,7 +233,7 @@ RoutineFit helps you stay consistent and reach your goals.
         <p>The planning feature in Routine Fit helps users organize their daily routines and health activities in a structured way. Users can create task lists such as exercise, study, or meditation, making it easier to manage time and stay disciplined.</p>
       </div>
       <div class="col-md-6 key-info">
-        <img src="assets/images/plan.png" alt="Planning Routines" class="img-fluid rounded">
+        <img loading="lazy" src="assets/images/plan.png" alt="Planning Routines" class="img-fluid rounded">
       </div>
     </div>
   </div>
@@ -247,7 +244,7 @@ RoutineFit helps you stay consistent and reach your goals.
         <p>This feature allows users to define clear and achievable goals for personal growth. Setting goals gives direction and purpose, helping users stay focused and motivated throughout their journey.</p>
       </div>
       <div class="col-md-6">
-        <img src="assets/images/goals.png" alt="Setting Goals" class="img-fluid rounded">
+        <img loading="lazy" src="assets/images/goals.png" alt="Setting Goals" class="img-fluid rounded">
       </div>
     </div> 
   </div>
@@ -258,7 +255,7 @@ RoutineFit helps you stay consistent and reach your goals.
         <p>Routine Fit enables users to track their daily activities and habits. It monitors consistency using streaks and progress indicators, helping users stay motivated and aware of their performance.</p>
       </div>
       <div class="col-md-6 key-info">
-        <img src="assets/images/track.png" alt="Tracking Progress" class="img-fluid rounded">
+        <img loading="lazy" src="assets/images/track.png" alt="Tracking Progress" class="img-fluid rounded">
       </div>
     </div>
   </div>
@@ -269,7 +266,7 @@ RoutineFit helps you stay consistent and reach your goals.
         <p>The achievement feature rewards users when they complete goals and maintain consistency. It provides a sense of accomplishment and encourages users to continue improving their lifestyle.</p>
       </div>
       <div class="col-md-6">
-        <img src="assets/images/achieve.png" alt="Achieving Goals" class="img-fluid rounded">
+        <img loading="lazy" src="assets/images/achieve.png" alt="Achieving Goals" class="img-fluid rounded">
       </div>
     </div>
     </div>
@@ -370,7 +367,7 @@ RoutineFit helps you stay consistent and reach your goals.
             <div class="card shadow-sm rounded-4 border-0">
               <div class="card-body p-4 p-md-5">
                 <h3 class="card-title mb-4">Send us a message</h3>
-                <form action="#" method="post" class="needs-validation" novalidate>
+                <form id="contactForm" action="#" method="post" class="needs-validation" novalidate>
                   <div class="row g-3">
                     <div class="col-md-6">
                       <label for="contactName" class="form-label">Full Name</label>
@@ -401,8 +398,11 @@ RoutineFit helps you stay consistent and reach your goals.
                         </label>
                       </div>
                     </div>
-                    <div class="col-12" tabindex="0">
-                      <a class="btn btn-primary btn-lg" href="index.html">Send Message</a>
+                    <div class="col-12">
+                      <input type="submit" class="btn btn-primary btn-lg" value="Send Message"/>
+                    </div>
+                    <div class="col-12">
+                      <div id="contactFeedback" class="alert alert-success visually-hidden mt-3" role="status" aria-live="polite"></div>
                     </div>
                   </div>
                 </form>
@@ -421,5 +421,6 @@ RoutineFit helps you stay consistent and reach your goals.
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

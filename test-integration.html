@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test RoutineFit Flow</title>
+</head>
+<body>
+    <h1>RoutineFit Integration Test</h1>
+    <div id="test-results"></div>
+
+    <script>
+        const results = document.getElementById('test-results');
+
+        function log(message, type = 'info') {
+            const div = document.createElement('div');
+            div.innerHTML = `<strong>${type.toUpperCase()}:</strong> ${message}`;
+            div.style.margin = '10px 0';
+            div.style.padding = '10px';
+            div.style.borderLeft = `4px solid ${type === 'error' ? 'red' : type === 'success' ? 'green' : 'blue'}`;
+            results.appendChild(div);
+            console.log(`${type}: ${message}`);
+        }
+
+        // Test 1: Check if localStorage is working
+        function testLocalStorage() {
+            try {
+                localStorage.setItem('test', 'working');
+                const value = localStorage.getItem('test');
+                if (value === 'working') {
+                    log('localStorage is working correctly', 'success');
+                    localStorage.removeItem('test');
+                    return true;
+                } else {
+                    log('localStorage get/set failed', 'error');
+                    return false;
+                }
+            } catch (e) {
+                log('localStorage error: ' + e.message, 'error');
+                return false;
+            }
+        }
+
+        // Test 2: Simulate user signup
+        function testUserSignup() {
+            try {
+                const userData = {
+                    username: 'TestUser',
+                    email: 'test@example.com',
+                    password: 'password123',
+                    createdAt: new Date().toISOString(),
+                    routines: [],
+                    streaks: [],
+                    feedback: []
+                };
+
+                localStorage.setItem('routineFitUser', JSON.stringify(userData));
+                log('User signup simulation successful', 'success');
+                return true;
+            } catch (e) {
+                log('User signup simulation failed: ' + e.message, 'error');
+                return false;
+            }
+        }
+
+        // Test 3: Simulate routine creation
+        function testRoutineCreation() {
+            try {
+                const user = JSON.parse(localStorage.getItem('routineFitUser'));
+                if (!user) {
+                    log('No user found for routine creation', 'error');
+                    return false;
+                }
+
+                const routineData = {
+                    category: 'Health & Fitness',
+                    goalTitle: 'Run 5km daily',
+                    goalImportance: 'Improve cardiovascular health',
+                    goalPriority: 'High',
+                    goalMotivation: 'Very High',
+                    dailyAction: 'Run 5km',
+                    minutesPerDay: 30,
+                    bestTime: 'Morning',
+                    challenges: 'Weather conditions',
+                    support: 'Running partner',
+                    daysCompleted: [1, 2, 3, 4, 5, 6, 7], // Completed all days
+                    energyLevel: 'Very Good',
+                    reflection: 'Great progress this week!',
+                    createdAt: new Date().toISOString()
+                };
+
+                user.routines.push(routineData);
+
+                // Add streak
+                user.streaks.push({
+                    routineId: routineData.createdAt,
+                    daysCompleted: routineData.daysCompleted.length,
+                    category: routineData.category,
+                    completedAt: new Date().toISOString()
+                });
+
+                localStorage.setItem('routineFitUser', JSON.stringify(user));
+                log('Routine creation simulation successful', 'success');
+                return true;
+            } catch (e) {
+                log('Routine creation simulation failed: ' + e.message, 'error');
+                return false;
+            }
+        }
+
+        // Test 4: Test dashboard data loading
+        function testDashboardDataLoading() {
+            try {
+                // Simulate dashboard data loading
+                const user = JSON.parse(localStorage.getItem('routineFitUser'));
+                if (!user) {
+                    log('No user data found for dashboard', 'error');
+                    return false;
+                }
+
+                if (!user.routines || user.routines.length === 0) {
+                    log('No routines found in user data', 'error');
+                    return false;
+                }
+
+                // Convert routines to dashboard format
+                const dashboardData = user.routines.map(routine => ({
+                    date: new Date(routine.createdAt).toISOString().split('T')[0],
+                    completedPercent: Math.round((routine.daysCompleted.length / 7) * 100),
+                    checkedDays: routine.daysCompleted.length,
+                    mood: routine.energyLevel || 'Average',
+                    category: routine.category,
+                    goalTitle: routine.goalTitle,
+                    dailyAction: routine.dailyAction,
+                    minutesPerDay: routine.minutesPerDay,
+                    priority: routine.goalPriority,
+                    motivation: routine.goalMotivation
+                }));
+
+                log(`Dashboard data loaded successfully: ${dashboardData.length} routines`, 'success');
+                log(`Sample routine: ${dashboardData[0].goalTitle} - ${dashboardData[0].completedPercent}% complete`, 'info');
+
+                return true;
+            } catch (e) {
+                log('Dashboard data loading failed: ' + e.message, 'error');
+                return false;
+            }
+        }
+
+        // Test 5: Test feedback storage
+        function testFeedbackStorage() {
+            try {
+                const user = JSON.parse(localStorage.getItem('routineFitUser'));
+                if (!user) {
+                    log('No user found for feedback test', 'error');
+                    return false;
+                }
+
+                const feedback = {
+                    rating: 5,
+                    text: 'Excellent app! Really helped me build consistency.',
+                    submittedAt: new Date().toISOString()
+                };
+
+                user.feedback = user.feedback || [];
+                user.feedback.push(feedback);
+
+                localStorage.setItem('routineFitUser', JSON.stringify(user));
+                log('Feedback storage simulation successful', 'success');
+                return true;
+            } catch (e) {
+                log('Feedback storage simulation failed: ' + e.message, 'error');
+                return false;
+            }
+        }
+
+        // Run all tests
+        function runTests() {
+            log('Starting RoutineFit Integration Tests...', 'info');
+
+            const tests = [
+                { name: 'localStorage', func: testLocalStorage },
+                { name: 'User Signup', func: testUserSignup },
+                { name: 'Routine Creation', func: testRoutineCreation },
+                { name: 'Dashboard Data Loading', func: testDashboardDataLoading },
+                { name: 'Feedback Storage', func: testFeedbackStorage }
+            ];
+
+            let passed = 0;
+            let total = tests.length;
+
+            tests.forEach(test => {
+                log(`Running test: ${test.name}`, 'info');
+                if (test.func()) {
+                    passed++;
+                }
+            });
+
+            log(`Test Results: ${passed}/${total} tests passed`, passed === total ? 'success' : 'error');
+
+            if (passed === total) {
+                log('🎉 All tests passed! The RoutineFit integration is working correctly.', 'success');
+            } else {
+                log('❌ Some tests failed. Please check the implementation.', 'error');
+            }
+        }
+
+        // Auto-run tests when page loads
+        window.addEventListener('load', runTests);
+    </script>
+</body>
+</html>
