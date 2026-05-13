@@ -22,248 +22,167 @@ The main purpose of **Routine Fit** is to provide a **unified digital platform**
 - **HTML5** – Semantic and accessible markup  
 - **CSS3** – Custom styling and layout improvements  
 - **Bootstrap 5** – Responsive grid, components, and utilities  
-- **JavaScript (Bootstrap Bundle)** – Carousel, tabs, and interactivity  
+- **JavaScript** – Interactive forms, dashboard, progress stepper, chart rendering, localStorage support  
+- **Chart.js** – Data visualization for progress analytics  
+- **SortableJS** – Drag-and-drop dashboard widgets  
+- **html2pdf.js** – Export reports to PDF  
 - **CDN‑based assets** – For faster loading and reliability  
 
 ---
 
-## 📂 Project Structure
+## 📌 Table of Contents
 
-RoutineFit/
-│
-├── index.html              # Landing page (Home)
-├── dashboard.html          # User dashboard (overview & shortcuts)
-├── profile.html            # User profile management
-├── progress.html           # Progress reports & analytics
-├── setting.html            # User settings & preferences
-├── signing.html            # Sign up / Login page
-├── README.md
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css       # Custom styles
-│   ├── images/
-│   │   ├── logo.png
-│   │   ├── plan.png
-│   │   ├── goals.png
-│   │   ├── track.png
-│   │   ├── achieve.png
-│   │   ├── *.webp
-│   │   └── *.jpg
-│
-└── favicon.ico
---
-
-## ✨ Key Features
-
-### ✅ 1. Responsive Navigation Bar
-- Sticky top navigation
-- Brand logo with accessibility improvements
-- “Get Started” call‑to‑action button
+- [Project Purpose](#-project-purpose)
+- [Tech Stack](#-tech-stack)
+- [User Stories & Acceptance Criteria](#user-stories--acceptance-criteria)
+- [Features](#features)
+- [Screenshots for All Screen Sizes](#screenshots-for-all-screen-sizes)
+- [UI Components Used](#ui-components-used)
+- [Data Management](#data-management)
+- [Pages Included](#pages-included)
+- [Accessibility & Responsiveness](#accessibility--responsiveness)
+- [Lighthouse Performance](#lighthouse-performance)
 
 ---
 
-### ✅ 2. Hero Section with Carousel
-- Full‑width responsive carousel
-- Clear value proposition
-- Multiple slides highlighting core features
-- Accessible controls and indicators
+## 🧾 User Stories & Acceptance Criteria
+
+### User Story 1: Sign-up and Authentication
+- As a new user, I want to create an account so that I can access my personalized dashboard.
+- Acceptance Criteria:
+  - User can enter name, email, password, and confirm password.
+  - Password validation requires at least 6 characters.
+  - User data is saved in localStorage upon successful signup.
+  - After signup, the user is redirected to the dashboard.
+
+### User Story 2: Personalized Dashboard
+- As a user, I want to see my name and progress data so I feel connected to my routine journey.
+- Acceptance Criteria:
+  - The dashboard displays the signed-in username.
+  - Weekly and monthly metrics are visible in cards and charts.
+  - Dashboard uses localStorage data to render user progress.
+
+### User Story 3: Routine Progress with Stepper
+- As a user, I want to build a routine through a guided stepper flow so that I can plan and track a full routine.
+- Acceptance Criteria:
+  - The progress page has a category selection stage using cards.
+  - The stepper moves through goal, routine, tracking, and completion stages.
+  - Completion triggers a streak or reward message.
+  - Feedback is collected after the user completes the final step.
+
+### User Story 4: Visual Data and Reports
+- As a user, I want to view charts and export my progress so I can analyze and share my routine performance.
+- Acceptance Criteria:
+  - Charts display completion percentage, streak counts, mood, and category distribution.
+  - The user can export reports as PDF, CSV, or JSON.
+  - Drag-and-drop widgets are enabled for dashboard customization.
+
+### User Story 5: Contact and Support
+- As a visitor, I want to send a message from the landing page so I can ask for help or provide feedback.
+- Acceptance Criteria:
+  - Contact form validates required fields only after submit.
+  - The form shows a confirmation message after successful submission.
+  - No errors occur when the contact form is not present on other pages.
+
+## ⭐ Features
+
+- Responsive hero carousel on the landing page.
+- Stepper-based routine progress form with category cards.
+- Personalized user greeting across dashboard and progress pages.
+- Progress analytics using Chart.js line, bar, and doughnut charts.
+- Drag-and-drop dashboard widgets with SortableJS.
+- Export report options: PDF, CSV, JSON.
+- LocalStorage-based data persistence for user profile, routines, streaks, and feedback.
+- Accessible forms and interactive buttons with keyboard support.
+
+## 🖼️ Screenshots for All Screen Sizes
+
+### Website Flow
+
+1. **Homepage** – hero carousel, feature overview, benefits section, and contact form.
+2. **Sign-up Page** – user registration form and onboarding experience.
+3. **Dashboard** – personalized analytics, charts, and export panel.
+4. **Progress Page** – stepper workflow, routine category cards, and completion tracking.
+5. **Feedback & Contact** – support form with submission confirmation.
+
+### Screen Size Variation
+
+- **Mobile** – compact navigation, stacked cards, and touch-friendly buttons.
+- **Tablet** – balanced grid layout, visible charts, and responsive stepper controls.
+- **Desktop** – full dashboard view with chart grid, export modal, and wider content panels.
+
+
+> Screenshots are organized by page flow first, then by device size for each view.
+
+#### Homepage
+
+![Homepage Mobile](Screenshot_13-5-2026_21400_127.0.0.1.jpeg) ![Homepage Tablet](![alt text](image-6.png) ![Dashboard Desktop]![alt text](Image.png)
+
+#### Sign-up Page
+
+![Sign-up Mobile]![alt text](image-2.png) ![Sign-up Tablet] ![alt text](image-7.png) ![Dashboard Desktop] (Screenshot_13-5-2026_213336_tech-stack-hub-lab.github.io.jpeg)
+
+#### Dashboard
+
+![Dashboard Mobile]![alt text](image-1.png) ![Dashboard Tablet] ![alt text](image-8.png)![Dashboard Desktop](Screenshot_13-5-2026_214719_tech-stack-hub-lab.github.io.jpeg)
+
+#### Progress Page
+
+
+![Progress Mobile]![alt text](image-5.png)![alt text](Screenshot_13-5-2026_215119_tech-stack-hub-lab.github.io.jpeg)![alt text](image-4.png)![alt text](image-3.png)![alt text](Screenshot_13-5-2026_215258_tech-stack-hub-lab.github.io.jpeg) ![Progress Tablet]![alt text](image-9.png)![alt text](image-6.png)![Progress Desktop](Screenshot_13-5-2026_214027_tech-stack-hub-lab.github.io.jpeg)(Screenshot_13-5-2026_214123_tech-stack-hub-lab.github.io.jpeg)(Screenshot_13-5-2026_214227_tech-stack-hub-lab.github.io.jpeg)(Screenshot_13-5-2026_214252_tech-stack-hub-lab.github.io.jpeg)
+(Screenshot_13-5-2026_214635_tech-stack-hub-lab.github.io.jpeg) 
+
+#### Contact & Feedback
+
+
+![Contact Mobile]![alt text](image-10.png) ![Contact Tablet]![alt text](image-9.png)![Contact Desktop] (Screenshot_13-5-2026_214635_tech-stack-hub-lab.github.io.jpeg)
+
+
+
+
+
+## 🧩 UI Components Used
+
+- **Carousel** – hero image slider for landing page highlights.
+- **Stepper** – multi-step routine creation workflow.
+- **Charts** – data visualization for progress tracking.
+- **Forms** – signup, contact, and progress/routine data collection.
+- **Cards** – routine category selection, benefit highlights, dashboard widgets, and export options.
+- **Buttons** – primary action buttons, export controls, and navigation items.
+- **Modals/Alerts** – export modal and success messages.
+
+## 💾 Data Management
+
+- Uses `localStorage` to store user profile data, routine entries, streaks, and feedback.
+- The dashboard reads stored routines and displays analytics from user activity.
+- Data is saved in JSON format for future report exports.
+
+## 📄 Pages Included
+
+- `index.html` — landing page with hero carousel, feature overview, benefits, and contact form.
+- `signing.html` — signup page with form validation and user registration.
+- `dashboard.html` — personalized analytics dashboard with cards, charts, drag-and-drop widgets, and export options.
+- `progress.html` — routine creation page with category cards, stepper workflow, completion summary, streak feedback, and review.
+- `assets/css/style.css` — project styling, accessibility enhancements, and responsive layout.
+- `assets/js/script.js` — main JavaScript logic for signup, profile display, dashboard rendering, contact form handling, and progress workflow.
+
+## ✅ Accessibility & Responsiveness
+
+- Uses semantic HTML and accessible button/label patterns.
+- Includes `tabindex` support for keyboard navigation.
+- Uses `loading="lazy"` for images to speed up page load.
+- Applies responsive breakpoints for mobile, tablet, and desktop layouts.
+
+## 🚦 Lighthouse Performance
+
+- **Performance**: Optimized for fast interactions with lazy-loaded assets and minimal DOM overhead.
+- **Accessibility**: Focuses on keyboard navigation, form labeling, and readable contrast.
+- **Best Practices**: Uses modern HTML, avoids duplicate script loads, and leverages CDN resources.
+- **SEO**: Includes meta descriptions, page titles, and meaningful content structure.
+
+> Recommended: Run Chrome Lighthouse for exact scores and capture reports for mobile and desktop performance.
 
 ---
 
-### ✅ 3. Feature Overview (Tabbed Section)
-- Four main features:
-  - **Plan**
-  - **Set Your Goals**
-  - **Track**
-  - **Achieve**
-- Clean tab navigation using Bootstrap Tabs
-- Image + text layout for better understanding
 
----
 
-### ✅ 4. Key Benefits Section
-- Card‑based layout
-- Highlights real‑world benefits such as:
-  - Goal management
-  - Daily routine planning
-  - Calendar‑based scheduling
-  - Health & fitness management
-- Fully responsive grid
-- Consistent card heights
-
----
-
-### ✅ 5. Contact & Subscription Form
-- Accessible and validated form fields
-- Newsletter subscription option
-- Clear support and contact information
-- Clean UI with Bootstrap cards
-
----
-
-### ✅ 6. Footer
-- Sticky‑bottom layout using Flexbox
-- Clean and minimal copyright notice
-
----
-
-## ♿ Accessibility Considerations
-
-- Semantic HTML (`header`, `main`, `section`, `footer`)
-- Proper `alt` text for images
-- Keyboard‑friendly navigation
-- ARIA attributes for tabs and carousel
-- Valid form labels and feedback messages
-
----
-
-## 📱 Responsiveness
-
-Routine Fit is fully responsive and optimized for:
-
-- ✅ Mobile devices
-- ✅ Tablets
-- ✅ Laptops & desktops
-
-Bootstrap’s grid system and utility classes ensure consistent layout across screen sizes.
-
----
-
-## 🧩 Layout Improvements Implemented
-
-- Full‑height page layout using Flexbox
-- Footer stays at the bottom on short pages
-- Carousel images use `object-fit: cover`
-- Removed invalid SVG markup
-- Fixed duplicate carousel indicators
-- Improved card structure for grid stability
-
----
-
-## ▶️ How to Run the Project
-
-1. Download or clone the repository
-2. Open `index.html` in any modern browser
-3. Make sure you have an active internet connection (Bootstrap CDN)
-
-_No build tools or installations required._
-
----
-
-## 📌 Future Enhancements
-
-- User authentication (Login / Signup)
-- Habit tracking dashboard
-- Progress analytics and charts
-- Stepper‑based habit creation form
-- Dark mode support
-- Backend integration
-
----
-
-## 👩‍💻 Author
-
-**Routine Fit**  
-Developed as a web development project focused on usability, accessibility, and responsive design.
-
----
-
-## 📄 License
-
-This project is for educational and demonstration purposes.
-
- Pages Overview
-🏠 index.html
-
-Landing page
-Hero carousel
-Feature overview
-Benefits section
-Contact & subscription form
-
-
-📊 dashboard.html
-
-Central hub after login
-Quick access to:
-
-Habits
-Goals
-Progress
-Reports
-
-
-Summary cards & shortcuts
-
-
-👤 profile.html
-
-User personal details
-
-
-
-📈 progress.html
-
-Habit completion reports
-Streak tracking
-Progress bars & achievements
-Performance insights
-
-
-⚙️ setting.html
-
-Theme & Language settings
-
-
-🔐 signing.html
-
-User registration
-Login form
-Validation-ready structure
-Entry point to dashboard
-
-
-## 📸 Screenshots
-
-### 🏠 Home Page
-![Home Page](screenshots/home.png)
-![alt text](image.png)
-
-### 🔐 Sign In / Sign Up
-![Signing Page](screenshots/signing.png)
-![alt text](image-1.png)
-
-### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
-![alt text](image-2.png)
-
-### 👤 Profile Page
-![Profile Page](screenshots/profile.png)
-![alt text](image-3.png)
-
-### 📈 Progress Report
-![Progress Report](screenshots/progress.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
-
-### ⚙️ Settings Page
-![Settings Page](screenshots/settings.png)
-![alt text](image-4.png)
-
-## 🚀 Performance & Accessibility Audit
-
-Routine Fit was evaluated using **Google Lighthouse** to ensure optimal performance, accessibility, and SEO.
-
-screenshots/lighthouse-summary.png
-
-### Lighthouse Scores
-- ⚡ Performance: 99+
-- ♿ Accessibility: 98+
-- ✅ Best Practices: 100
-- 🔍 SEO: 100
-
-📄 **Full Lighthouse Report:**  
-[Download Lighthouse PDF](reports/lighthouse-performance.pdf)
