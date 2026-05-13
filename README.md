@@ -182,7 +182,8 @@ The main purpose of **Routine Fit** is to provide a **unified digital platform**
 
 > Recommended: Run Chrome Lighthouse for exact scores and capture reports for mobile and desktop performance.
 
----
+![alt text](image-12.png)
 
+![alt text](image-13.png)
 
 
