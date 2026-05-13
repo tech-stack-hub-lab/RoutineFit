@@ -1,6 +1,5 @@
-  // ============================================
-        // SingnUp
-        // ============================================
+
+        // SingnUp Form
 
 function handleSignUp() {
         const name = document.getElementById('name').value.trim();
@@ -50,35 +49,7 @@ function handleSignUp() {
         window.location.href = 'dashboard.html';
       }
 
-      // Contact form submission
-      function handleContactSubmit(event) {
-        event.preventDefault();
-
-        const form = document.getElementById('contactForm');
-        form.classList.add('was-validated');
-
-        const name = document.getElementById('contactName').value.trim();
-        const email = document.getElementById('contactEmail').value.trim();
-        const subject = document.getElementById('contactSubject').value.trim();
-        const message = document.getElementById('contactMessage').value.trim();
-        const feedbackEl = document.getElementById('contactFeedback');
-
-        if (!name || !email || !subject || !message) {
-          feedbackEl.classList.remove('visually-hidden', 'alert-success');
-          feedbackEl.classList.add('alert-danger');
-          feedbackEl.textContent = 'Please complete all fields before sending your message.';
-          return;
-        }
-
-        feedbackEl.classList.remove('visually-hidden', 'alert-danger');
-        feedbackEl.classList.add('alert-success');
-        feedbackEl.textContent = 'Thank you for contacting us! We will get back to you soon.';
-
-        form.reset();
-        form.classList.remove('was-validated');
-      }
-
-      // Allow Enter key to submit form and initialize contact form
+      // Allow Enter key to submit form
       document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('form');
         if (form) {
@@ -87,11 +58,6 @@ function handleSignUp() {
               handleSignUp();
             }
           });
-        }
-
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-          contactForm.addEventListener('submit', handleContactSubmit);
         }
       });
 
@@ -104,23 +70,36 @@ function handleSignUp() {
 
 
 
-     function initializeProfile() {
-            // Get user data from localStorage
+        function initializeProfile() {
             const user = JSON.parse(localStorage.getItem('routineFitUser') || 'null');
+            const username = localStorage.getItem('routineFitUsername') || (user && user.name) || 'User';
+
             if (!user) {
-                alert('Please sign up first!');
-                window.location.href = 'signing.html';
                 return;
             }
-            document.addEventListener("DOMContentLoaded", function () {
-            const username = localStorage.getItem("routineFitUsername");
-                if (username) {
-                    document.getElementById("usernameDisplay").innerText =
-                    "Welcome, " + username;
-                }
-                });
 
+            const usernameDisplay = document.getElementById('usernameDisplay');
+            if (usernameDisplay) {
+                usernameDisplay.innerText = `Welcome, ${username}`;
             }
+
+            const profileUsername = document.getElementById('profileUsername');
+            if (profileUsername) {
+                profileUsername.textContent = `Welcome, ${username}`;
+            }
+
+            const dropdownUsername = document.getElementById('dropdownUsername');
+            if (dropdownUsername) {
+                dropdownUsername.textContent = `Welcome, ${username}`;
+            }
+
+            const profileAvatar = document.getElementById('profileAvatar');
+            if (profileAvatar) {
+                const firstName = username.split(' ')[0];
+                const firstLetter = firstName.charAt(0).toUpperCase();
+                profileAvatar.innerHTML = `<span style="font-size: 1.5rem; font-weight: 700;">${firstLetter}</span>`;
+            }
+        }
 
         function logout() {
             if (confirm('Are you sure you want to logout?')) {
@@ -654,12 +633,15 @@ function handleSignUp() {
         // ============================================
         // MODAL CLICK OUTSIDE TO CLOSE
         // ============================================
-
-        document.getElementById('exportModal').addEventListener('click', function(e) {
+        const el = document.getElementById('exportModal');
+        if (el) {
+        el.addEventListener('click', function(e) {
             if (e.target === this) {
                 closeExportModal();
             }
         });
+        }
+      
 
         // ============================================
         // INITIALIZATION
@@ -675,9 +657,11 @@ function handleSignUp() {
             initDragDrop();
         }
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', init);
-        window.addEventListener('load', init);
+        // Initialize dashboard on page load only when dashboard elements exist
+        if (document.getElementById('completionChart')) {
+            document.addEventListener('DOMContentLoaded', init);
+            window.addEventListener('load', init);
+        }
 
 
     // ============================================
@@ -692,9 +676,12 @@ function handleSignUp() {
         let chart = null;
         let selectedRating = 0;
 
-        // Initialize
+        // Initialize progress page only if progress elements exist
         document.addEventListener('DOMContentLoaded', function() {
-            // Check if user is logged in
+            if (!document.querySelector('.routine-card')) {
+                return;
+            }
+
             const user = JSON.parse(localStorage.getItem('routineFitUser') || 'null');
             if (!user) {
                 alert('Please sign up first!');
@@ -702,16 +689,15 @@ function handleSignUp() {
                 return;
             }
 
+            initializeProfile();
+
             // Category selection
             document.querySelectorAll('.routine-card').forEach(card => {
                 card.addEventListener('click', function() {
-                    // Remove selected class from all cards
                     document.querySelectorAll('.routine-card').forEach(c => c.classList.remove('selected'));
-                    // Add selected class to clicked card
                     this.classList.add('selected');
                     selectedCategory = this.dataset.type;
 
-                    // Auto proceed to stepper after short delay
                     setTimeout(() => {
                         document.getElementById('categorySection').classList.add('d-none');
                         document.getElementById('stepperSection').classList.remove('d-none');
