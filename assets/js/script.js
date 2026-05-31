@@ -1,5 +1,82 @@
+function animateCounter(el, target) {
+  let start = 0;
+  let duration = 2000;
+  let startTime = null;
 
-        // SingnUp Form
+  function update(timestamp) {
+    if (!startTime) startTime = timestamp;
+
+    let progress = (timestamp - startTime) / duration;
+    progress = Math.min(progress, 1);
+
+    let value = Math.floor(progress * target);
+    el.innerText = value;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.innerText = target;
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+
+// ✅ SCROLL DETECTION
+const section = document.getElementById("stats");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+
+      // ✅ DELAY
+      setTimeout(() => {
+        document.querySelectorAll(".counter").forEach(el => {
+          let target = parseInt(el.getAttribute("data-target"));
+          animateCounter(el, target);
+        });
+      }, 500);
+
+      observer.unobserve(section); // run once only ✅
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(section);
+
+
+// ✅ Counter function
+function animateCounter(el, target) {
+  let start = null;
+  let duration = 2000;
+
+  function update(time) {
+    if (!start) start = time;
+
+    let progress = Math.min((time - start) / duration, 1);
+    let value = Math.floor(progress * target);
+
+    el.innerText = value.toLocaleString();
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      el.innerText = target.toLocaleString();
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+      
+      
+      
+      
+      
+      
+      
+      // SingnUp Form
 
 function handleSignUp() {
         const name = document.getElementById('name').value.trim();
