@@ -5,6 +5,40 @@ Routine Fit is a responsive, user‑friendly web application designed to help us
 
 ---
 
+## 📌 Table of Contents
+
+- [Project Purpose](#-project-purpose)
+- [Tech Stack](#-tech-stack)
+- [User Stories & Acceptance Criteria](#user-stories--acceptance-criteria)
+- [Features](#features)
+- [Screenshots for All Screen Sizes](#screenshots-for-all-screen-sizes)
+- [UI Components Used](#ui-components-used)
+- [Data Management](#data-management)
+- [Pages Included](#pages-included)
+- [Accessibility & Responsiveness](#accessibility--responsiveness)
+- [Lighthouse Performance](#lighthouse-performance)
+## 📚 Table of Contents
+
+1. Project Overview  
+2. User Value  
+3. Features  
+4. Technologies Used  
+5. Front-End Design & Interactivity (LO1)  
+6. Testing & Validation (LO2)  
+7. Deployment & Version Control (LO3)  
+8. Documentation & Code Quality (LO4)  
+9. JavaScript Functionality (LO5)  
+10. AI Usage & Reflection (LO6)  
+11. Installation & Setup  
+12. Deployment Instructions  
+13. Screenshots  
+14. API Attribution  
+15. Project Structure  
+16. User Stories  
+17. Future Improvements  
+
+---
+
 ## 🚀 Project Purpose
 
 The main purpose of **Routine Fit** is to provide a **unified digital platform** where users can:
@@ -23,77 +57,54 @@ The main purpose of **Routine Fit** is to provide a **unified digital platform**
 - **CSS3** – Custom styling and layout improvements  
 - **Bootstrap 5** – Responsive grid, components, and utilities  
 - **JavaScript** – Interactive forms, dashboard, progress stepper, chart rendering, localStorage support  
-- **Chart.js** – Data visualization for progress analytics  
-- **SortableJS** – Drag-and-drop dashboard widgets  
-- **html2pdf.js** – Export reports to PDF  
-- **CDN‑based assets** – For faster loading and reliability  
-
----
-
-## 📌 Table of Contents
-
-- [Project Purpose](#-project-purpose)
-- [Tech Stack](#-tech-stack)
-- [User Stories & Acceptance Criteria](#user-stories--acceptance-criteria)
-- [Features](#features)
-- [Screenshots for All Screen Sizes](#screenshots-for-all-screen-sizes)
-- [UI Components Used](#ui-components-used)
-- [Data Management](#data-management)
-- [Pages Included](#pages-included)
-- [Accessibility & Responsiveness](#accessibility--responsiveness)
-- [Lighthouse Performance](#lighthouse-performance)
-
----
 
 ## 🧾 User Stories & Acceptance Criteria
 
-### User Story 1: Sign-up and Authentication
-- As a new user, I want to create an account so that I can access my personalized dashboard.
-- Acceptance Criteria:
-  - User can enter name, email, password, and confirm password.
-  - Password validation requires at least 6 characters.
-  - User data is saved in localStorage upon successful signup.
-  - After signup, the user is redirected to the dashboard.
+### 🌙 Theme Feature
+- As a user, I want to toggle between dark and light mode so that I can use the app comfortably in different lighting conditions.
+- As a returning user, I want my theme preference saved so that I don’t need to change it every time.
 
-### User Story 2: Personalized Dashboard
-- As a user, I want to see my name and progress data so I feel connected to my routine journey.
-- Acceptance Criteria:
-  - The dashboard displays the signed-in username.
-  - Weekly and monthly metrics are visible in cards and charts.
-  - Dashboard uses localStorage data to render user progress.
+---
 
-### User Story 3: Routine Progress with Stepper
-- As a user, I want to build a routine through a guided stepper flow so that I can plan and track a full routine.
-- Acceptance Criteria:
-  - The progress page has a category selection stage using cards.
-  - The stepper moves through goal, routine, tracking, and completion stages.
-  - Completion triggers a streak or reward message.
-  - Feedback is collected after the user completes the final step.
+### 💱 Currency Converter
+- As a user, I want to convert currencies in real time so that I can quickly check exchange values.
+- As a user, I want to select different currencies so that I can convert between any countries.
+- As a user, I want to see the conversion rate and last updated time so that I can trust the accuracy.
 
-### User Story 4: Visual Data and Reports
-- As a user, I want to view charts and export my progress so I can analyze and share my routine performance.
-- Acceptance Criteria:
-  - Charts display completion percentage, streak counts, mood, and category distribution.
-  - The user can export reports as PDF, CSV, or JSON.
-  - Drag-and-drop widgets are enabled for dashboard customization.
+---
 
-### User Story 5: Contact and Support
-- As a visitor, I want to send a message from the landing page so I can ask for help or provide feedback.
-- Acceptance Criteria:
-  - Contact form validates required fields only after submit.
-  - The form shows a confirmation message after successful submission.
-  - No errors occur when the contact form is not present on other pages.
+### 🔄 Swap Function
+- As a user, I want to swap currencies instantly so that I can save time when reversing conversions.
 
-## ⭐ Features
+---
 
-- Responsive hero carousel on the landing page.
-- Stepper-based routine progress form with category cards.
-- Personalized user greeting across dashboard and progress pages.
-- Progress analytics using Chart.js line, bar, and doughnut charts.
-- Drag-and-drop dashboard widgets with SortableJS.
-- Export report options: PDF, CSV, JSON.
-- LocalStorage-based data persistence for user profile, routines, streaks, and feedback.
-- Accessible forms and interactive buttons with keyboard support.
+### 📊 Chart Feature
+- As a user, I want to see exchange rate trends in a chart so that I can understand currency changes over time.
+- As a user, I want to change the time range (week/month/year) so that I can analyse trends easily.
+
+---
+
+### 🌦️ Weather Feature
+- As a user, I want to see my local weather so that I can stay informed without leaving the app.
+- As a user, I want clear weather icons and temperature so that the data is easy to understand.
+
+---
+
+### 📂 Currency List / Cards
+- As a user, I want to browse available currencies so that I can learn about different world currencies.
+- As a user, I want a “Load More” option so that the page stays clean and fast.
+
+---
+
+### ⚠️ Error Handling
+- As a user, I want clear error messages when I enter invalid input so that I know how to fix it.
+- As a user, I want the app to handle API errors smoothly so that it doesn’t crash.
+
+---
+
+### 📱 Responsiveness & Navigation
+- As a mobile user, I want the app to work on my device so that I can use it anywhere.
+- As a user, I want smooth navigation so that I can move between sections easily.
 
 ## 🖼️ Screenshots for All Screen Sizes
 

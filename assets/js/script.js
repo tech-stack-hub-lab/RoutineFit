@@ -19,6 +19,96 @@ function animateCounter(el, target) {
     }
   }
 
+// ============================================
+// Contact form handler (contact__v2)
+// Robust init: run immediately if DOM is ready, or wait for DOMContentLoaded
+// ============================================
+document.addEventListener('DOMContentLoaded', function () {
+    alert("test");
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function (e) {
+        
+        e.preventDefault();
+
+        const name = (document.getElementById('name') || {}).value || '';
+        const email = (document.getElementById('email') || {}).value || '';
+        const message = (document.getElementById('message') || {}).value || '';
+
+        // Basic validation
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            if (errorMessage) {
+                errorMessage.classList.remove('d-none');
+                errorMessage.style.display = 'block';
+                errorMessage.textContent = 'Please fill in name, email and message fields.';
+                setTimeout(() => {
+                    errorMessage.classList.add('d-none');
+                    errorMessage.style.display = '';
+                }, 4000);
+            } else {
+                alert('Please fill in name, email and message fields.');
+            }
+            return;
+        }
+
+        // Simulate sending message (replace with real API call later)
+        if (successMessage) {
+            successMessage.classList.add('d-none');
+            successMessage.style.display = 'none';
+        }
+        if (errorMessage) {
+            errorMessage.classList.add('d-none');
+            errorMessage.style.display = 'none';
+        }
+
+        // Show loading state on the button
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn ? submitBtn.innerHTML : '';
+        if (submitBtn) submitBtn.disabled = true;
+        if (submitBtn) submitBtn.innerHTML = 'Sending...';
+
+        setTimeout(() => {
+            // On success
+            if (successMessage) {
+                successMessage.classList.remove('d-none');
+                successMessage.style.display = 'block';
+                successMessage.setAttribute('role', 'status');
+                successMessage.setAttribute('aria-live', 'polite');
+                successMessage.textContent = 'Message sent successfully!';
+            } else {
+                alert('Message sent successfully!');
+            }
+
+            // Reset form
+            contactForm.reset();
+
+            // Restore button
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+
+            // Hide success after a while
+            setTimeout(() => {
+                if (successMessage) {
+                    successMessage.classList.add('d-none');
+                    successMessage.style.display = '';
+                }
+            }, 4500);
+        }, 950);
+    });
+});
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupContactFormHandler);
+} else {
+    setupContactFormHandler();
+}
+
   requestAnimationFrame(update);
 }
 
