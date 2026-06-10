@@ -26,7 +26,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/routinefit_favicon.ico">
  </head>
   <body>
-    <header> 
+    <header>
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid px-4">
           <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
@@ -52,10 +52,10 @@
           <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="page-about.html">About Us</a>
+                <a class="nav-link" aria-current="page" href="page-about.html">About Us</a>
               </li>
               <li class="nav-item">
                 <a class="btn btn-outline-primary" href="signing.html">Get Started</a>
@@ -533,7 +533,7 @@ RoutineFit helps you stay consistent and reach your goals.
                         <textarea class="form-control" id="message" name="message" rows="5" required=""></textarea>
                       </div>
                     </div>
-                    <button id="contactSubmit" class="btn btn-primary fw-semibold" type="submit" onclick="(function(){const f=document.getElementById('contactForm'); if(f.requestSubmit) f.requestSubmit(); else f.submit();})()">Send Message</button>
+                    <input  class="btn btn-primary fw-semibold" type="submit" value="Send Message">
                   </form>
                   <div class="mt-3 d-none alert alert-success" id="successMessage">Message sent successfully!</div>
                   <div class="mt-3 d-none alert alert-danger" id="errorMessage">Message sending failed. Please try again later.</div>
@@ -606,8 +606,8 @@ RoutineFit helps you stay consistent and reach your goals.
                 =>>> Buy the pro version, which includes a functional PHP/AJAX contact form and many additional features.: https://freebootstrap.net/template/vertex-pro-bootstrap-website-template-for-portfolio/ <<<=
                 --> 
                 &copy;
-                <script>document.write(new Date().getFullYear());</script> Nova. 
-                 All rights reserved. Designed with <i class="bi bi-heart-fill text-danger"></i> by <a href="index.html">RoutineFit</a>
+                <script>document.write(new Date().getFullYear());</script> Routine Fit   
+                 All rights reserved. Designed with <i class="bi bi-heart-fill text-danger"></i> by <a href="index.html">Routine Fit</a>
               </div>
               <div class="col-xl-4 justify-content-start justify-content-xl-end quick-links d-flex flex-column flex-xl-row text-center text-xl-start gap-3"><a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a><a href="#">Cookie Policy</a></div>
             </div>
@@ -619,6 +619,6 @@ RoutineFit helps you stay consistent and reach your goals.
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/animate.js"></script>
   </body>
 </html>
